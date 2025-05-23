@@ -1,18 +1,32 @@
-function registrarPresenca() {
-    const checkboxes = document.querySelectorAll('input[name="aluno"]:checked');
-    const resultado = document.getElementById('resultado');
-
-    if (checkboxes.length === 0) {
-        resultado.innerHTML = "<p>Nenhum aluno foi marcado como presente.</p>";
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("attendanceForm");
+    const attendanceList = document.getElementById("attendanceList");
+  
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      const studentName = document.getElementById("studentName").value.trim();
+      const date = document.getElementById("date").value;
+  
+      if (!studentName || !date) {
+        alert("Por favor, preencha todos os campos.");
         return;
-    }
-
-    const alunosPresentes = Array.from(checkboxes).map(cb => cb.value);
-
-    resultado.innerHTML = `
-        <h2>Alunos Presentes:</h2>
-        <ul>
-            ${alunosPresentes.map(aluno => `<li>${aluno}</li>`).join('')}
-        </ul>
-    `;
-}
+      }
+  
+      // Cria item da lista
+      const li = document.createElement("li");
+      li.textContent = `${studentName} - ${new Date(date).toLocaleDateString('pt-BR')}`;
+  
+      // Botão remover
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remover";
+      removeBtn.classList.add("remove-btn");
+      removeBtn.onclick = () => li.remove();
+  
+      li.appendChild(removeBtn);
+      attendanceList.appendChild(li);
+  
+      form.reset();
+    });
+  });
+  

@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" >
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Registro de Presença</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Registro de Presença</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h1>Registro de Presença</h1>
+      </div>
+      <nav class="nav">
+        <a href="#register" class="nav-link active">Registrar</a>
+        <a href="#list" class="nav-link">Presenças</a>
+        <a href="#about" class="nav-link">Sobre</a>
+      </nav>
+    </header>
 
-<h1>Registro de Presença de Alunos</h1>
+    <main>
+      <section id="register" class="section register-section">
+        <h2>Registrar Presença</h2>
+        <form id="attendanceForm" autocomplete="off">
+          <div class="input-group">
+            <label for="studentName">Nome do Aluno</label>
+            <input
+              type="text"
+              id="studentName"
+              placeholder="Digite o nome"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="date">Data</label>
+            <input type="date" id="date" required />
+          </div>
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-user-check"></i> Registrar Presença
+          </button>
+        </form>
+      </section>
 
-<form id="formPresenca">
-    <ul>
-        <li><label><input type="checkbox" name="aluno" value="João"> João</label></li>
-        <li><label><input type="checkbox" name="aluno" value="Maria"> Maria</label></li>
-        <li><label><input type="checkbox" name="aluno" value="Pedro"> Pedro</label></li>
-        <li><label><input type="checkbox" name="aluno" value="Ana"> Ana</label></li>
-        <li><label><input type="checkbox" name="aluno" value="Lucas"> Lucas</label></li>
-    </ul>
-    <button type="button" onclick="registrarPresenca()">Registrar Presença</button>
-</form>
+      <section id="list" class="section list-section">
+        <h2>Lista de Presenças</h2>
+        <ul id="attendanceList"></ul>
+      </section>
+    </main>
 
-<div id="resultado"></div>
-
-<script src="script.js"></script>
-
+    <footer>
+      <p>
+        &copy; 2025 Sistema de Registro de Presença | Desenvolvido com
+        <i class="fas fa-heart"></i>
+      </p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
-    
