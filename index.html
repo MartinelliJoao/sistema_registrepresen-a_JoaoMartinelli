@@ -1,55 +1,60 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Diz que o arquivo é uma página HTML5 -->
+<html lang="pt-BR"> <!-- Página em português do Brasil -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro de Presença</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="java.js"></script>
+  <meta charset="UTF-8" /> <!-- Usa codificação UTF-8 para caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ajusta a página para celulares e tablets -->
+  <title>Registrar Presença</title> <!-- Título da página -->
+  <link rel="stylesheet" href="style.css" /> <!-- Liga o arquivo de estilo CSS -->
+  <script defer src="script.js"></script> <!-- Liga o arquivo JavaScript, que carrega depois do HTML -->
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="logo">
-        <i class="fa-solid fa-user-check"></i> Registro de Presença
+  <div class="container"> <!-- Caixa principal que segura tudo -->
+    <header class="header"> <!-- Cabeçalho da página -->
+      <div class="logo"> <!-- Espaço do logo e nome -->
+        <i class="fa-solid fa-user-check"></i> Registro de Presença <!-- Ícone e texto do título -->
       </div>
-      <nav class="nav">
-        <a class="nav-link active" href="#">Registrar</a>
-        <a class="nav-link" href="#">Presenças</a>
-        <a class="nav-link" href="#">Sobre</a>
+      <nav class="nav"> <!-- Menu de navegação -->
+        <a class="nav-link active" href="index.html">Registrar</a> <!-- Link para página Registrar, ativo -->
+        <a class="nav-link" href="presencas.html">Presenças</a> <!-- Link para página Presenças -->
+        <a class="nav-link" href="sobre.html">Sobre</a> <!-- Link para página Sobre -->
       </nav>
     </header>
 
-    <main>
-      <section class="section">
-        <h2>Registrar Presença</h2>
-        <form id="attendanceForm">
-          <div class="input-group">
-            <label for="studentName">Nome do Aluno</label>
-            <input type="text" id="studentName" placeholder="Digite o nome" />
+    <main> <!-- Conteúdo principal -->
+      <section class="section"> <!-- Seção do formulário -->
+        <h2>Registrar Presença</h2> <!-- Título da seção -->
+        <form id="attendanceForm"> <!-- Formulário para registrar -->
+          <div class="input-group"> <!-- Campo para nome -->
+            <label for="studentName">Nome do Aluno</label> <!-- Rótulo do campo nome -->
+            <input type="text" id="studentName" placeholder="Digite o nome" /> <!-- Caixa para digitar nome -->
           </div>
-          <div class="input-group">
-            <label for="date">Data</label>
-            <input type="date" id="date" />
+          <div class="input-group"> <!-- Campo para data -->
+            <label for="date">Data</label> <!-- Rótulo do campo data -->
+            <input type="date" id="date" /> <!-- Caixa para escolher data -->
           </div>
-          <button type="submit" class="btn-submit">
-            <i class="fa-solid fa-plus"></i> Registrar Presença
+          <div class="input-group"> <!-- Campo para status -->
+            <label for="status">Status</label> <!-- Rótulo do campo status -->
+            <select id="status"> <!-- Lista para escolher status -->
+              <option value="Presente">Presente</option> <!-- Opção presente -->
+              <option value="Falta">Falta</option> <!-- Opção falta -->
+            </select>
+          </div>
+          <div class="input-group" id="reasonGroup" style="display: none;"> <!-- Campo para motivo da falta, escondido -->
+            <label for="reason">Motivo da Falta</label> <!-- Rótulo do motivo -->
+            <input type="text" id="reason" placeholder="Ex.: Doença, Atraso..." /> <!-- Caixa para digitar motivo -->
+          </div>
+          <button type="submit" class="btn-submit"> <!-- Botão para enviar o formulário -->
+            <i class="fa-solid fa-plus"></i> Registrar <!-- Ícone e texto do botão -->
           </button>
         </form>
       </section>
-
-      <section class="section">
-        <h2>Lista de Presenças</h2>
-        <ul id="attendanceList"></ul>
-      </section>
     </main>
 
-    <footer>
-      © 2025 Sistema de Registro de Presença | <span>Desenvolvido com ❤️</span>
+    <footer> <!-- Rodapé da página -->
+      2025 Sistema de Registro de Presença | <span>Feito com ❤️</span> <!-- Texto simples no rodapé -->
     </footer>
   </div>
 
-  <!-- Font Awesome para ícones -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Script para os ícones -->
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Diz que é uma página HTML5 -->
+<html lang="pt-BR"> <!-- Página em português do Brasil -->
+<head>
+  <meta charset="UTF-8" /> <!-- Usa codificação UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ajusta a página para telas menores -->
+  <title>Lista de Presenças</title> <!-- Título da página -->
+  <link rel="stylesheet" href="style.css" /> <!-- Liga o arquivo de estilo CSS -->
+  <script defer src="script.js"></script> <!-- Liga o arquivo JavaScript, que carrega depois do HTML -->
+</head>
+<body>
+  <div class="container"> <!-- Caixa principal que segura tudo -->
+    <header class="header"> <!-- Cabeçalho da página -->
+      <div class="logo"> <!-- Espaço do logo e nome -->
+        <i class="fa-solid fa-user-check"></i> Registro de Presença <!-- Ícone e título -->
+      </div>
+      <nav class="nav"> <!-- Menu de navegação -->
+        <a class="nav-link" href="index.html">Registrar</a> <!-- Link para página Registrar -->
+        <a class="nav-link active" href="presencas.html">Presenças</a> <!-- Link ativo para página Presenças -->
+        <a class="nav-link" href="sobre.html">Sobre</a> <!-- Link para página Sobre -->
+      </nav>
+    </header>
+
+    <main> <!-- Conteúdo principal -->
+      <section class="section"> <!-- Seção da lista -->
+        <h2>Lista de Presenças</h2> <!-- Título da seção -->
+        <ul id="attendanceList"></ul> <!-- Lista onde as presenças serão mostradas -->
+      </section>
+    </main>
+
+    <footer> <!-- Rodapé da página -->
+      © 2025 Sistema de Registro de Presença | <span>Feito com ❤️</span> <!-- Texto simples no rodapé -->
+    </footer>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Script para os ícones -->
+</body>
+</html>
