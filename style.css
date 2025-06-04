@@ -14,7 +14,7 @@ body {
   display: flex;                                        /* Usa flexbox para centralizar conteúdo */
   justify-content: center;                              /* Centraliza horizontalmente */
   align-items: center;                                  /* Centraliza verticalmente */
-  padding: 20px;                                        /* Espaçamento interno */
+  padding: 20px;                                        /* Espaçamento interno. */
 }
 
 .container {

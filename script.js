@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {  // Espera a página carre
 
   const registros = JSON.parse(localStorage.getItem("registros") || "[]");  // Pega os registros salvos no localStorage, ou cria um array vazio
 
-  // Mostra ou esconde campo de motivo conforme o status escolhido
+  // Mostra ou esconde campo de motivo conforme o status escolhido. 
   if (statusSelect) {
     statusSelect.addEventListener("change", () => {
       reasonGroup.style.display = statusSelect.value === "Falta" ? "block" : "none";  // Se for falta mostra o campo, se não, esconde
